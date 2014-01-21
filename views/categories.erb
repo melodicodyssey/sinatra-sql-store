@@ -1,0 +1,15 @@
+<p>
+	<label> Categories </label>
+	<ol>
+		<% c = PGconn.new(:host => "localhost", :dbname => "storeadminsite", :password => "ilikega") %>
+		<% @categories.each do |category| %>
+			<li><%= category['name'] %></li>
+			<ul>
+			<% product_list(category['id'].each do |product| %>
+				
+				<li><%=product%></li>
+			<% end %>
+			</ul>
+		<% end %>
+	</ol>
+</p>

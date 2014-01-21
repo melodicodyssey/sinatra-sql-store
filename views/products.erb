@@ -4,4 +4,10 @@
   <% end %>
 </ul>
 
+<ul>
+	<% @categories.each do |category| %>
+	<li> [<%=category['id']%>]  <%=category['name']%> </li>
+	<% end %>
+</ul>
+
 <a href="products/new"> Create a new product.</a>
